@@ -1,6 +1,13 @@
 import { Button } from "@heroui/react";
-
-const ItemsButtons = ({ increment, decrement, id, items, deleteItem }) => {
+import { X } from "lucide-react";
+const ItemsButtons = ({
+  increment,
+  decrement,
+  id,
+  items,
+  deleteItem,
+  theme,
+}) => {
   return (
     <div className=" flex gap-8 font-bold text-white">
       <Button
@@ -17,12 +24,10 @@ const ItemsButtons = ({ increment, decrement, id, items, deleteItem }) => {
       >
         -
       </Button>
-      <Button
+      <X
         onClick={() => deleteItem(id)}
-        className="bg-red-600 p-1.5 px-2 rounded-full border border-black"
-      >
-        del
-      </Button>
+        className={`mt-3 rounded-full ${theme ? "text-gray-600 hover:bg-gray-300" : "hover:bg-gray-700"}  `}
+      ></X>
     </div>
   );
 };

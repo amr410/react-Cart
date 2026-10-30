@@ -20,14 +20,17 @@ const Items = ({
       <span>{items}</span>
 
       <span>{price}</span>
+
+      <span>Total : {items * price}</span>
+
       <ItemsButtons
         id={id}
         items={items}
+        theme={theme}
         increment={increment}
         decrement={decrement}
         deleteItem={deleteItem}
       />
-      <span>Total : {items * price}</span>
     </div>
   );
 };
