@@ -1,6 +1,6 @@
 import { Button } from "@heroui/react";
 
-const ItemsButtons = ({ increment, decrement, id, items, deleteIteam }) => {
+const ItemsButtons = ({ increment, decrement, id, items, deleteItem }) => {
   return (
     <div className=" flex gap-8 font-bold text-white">
       <Button
@@ -18,7 +18,7 @@ const ItemsButtons = ({ increment, decrement, id, items, deleteIteam }) => {
         -
       </Button>
       <Button
-        onClick={() => deleteIteam(id)}
+        onClick={() => deleteItem(id)}
         className="bg-red-600 p-1.5 px-2 rounded-full border border-black"
       >
         del

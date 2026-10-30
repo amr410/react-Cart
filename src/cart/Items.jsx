@@ -5,7 +5,7 @@ const Items = ({
   theme,
   increment,
   decrement,
-  deleteIteam,
+  deleteItem,
 }) => {
   return (
     <div
@@ -25,7 +25,7 @@ const Items = ({
         items={items}
         increment={increment}
         decrement={decrement}
-        deleteIteam={deleteIteam}
+        deleteItem={deleteItem}
       />
       <span>Total : {items * price}</span>
     </div>

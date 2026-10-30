@@ -30,6 +30,7 @@ function App() {
       setProducts([...products, { ...newProduct, items: 1 }]);
     }
   }
+
   function increment(productId) {
     let updatedProducts = products.map((product) => {
       if (product.id === productId) {
@@ -39,6 +40,7 @@ function App() {
     });
     setProducts(updatedProducts);
   }
+
   function decrement(productId) {
     let updatedProducts = products.map((product) => {
       if (product.id === productId) {
@@ -48,7 +50,8 @@ function App() {
     });
     setProducts(updatedProducts);
   }
-  function deleteIteam(productId) {
+
+  function deleteItem(productId) {
     let updatedProducts = products.filter(
       (product) => product.id !== productId,
     );
@@ -64,6 +67,7 @@ function App() {
     });
     setProducts(updatedProducts);
   }
+
   function emptyCart() {
     setProducts([]);
   }
@@ -72,6 +76,7 @@ function App() {
   function changeTheme() {
     setTheme(!theme);
   }
+
   return (
     <div>
       <Navbar
@@ -87,7 +92,7 @@ function App() {
         theme={theme}
         increment={increment}
         decrement={decrement}
-        deleteIteam={deleteIteam}
+        deleteItem={deleteItem}
         restItems={restItems}
         emptyCart={emptyCart}
         products={products}

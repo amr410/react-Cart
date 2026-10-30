@@ -8,7 +8,7 @@ const Cart = ({
   decrement,
   restItems,
   emptyCart,
-  deleteIteam,
+  deleteItem,
 }) => {
   const total = products.reduce(
     (sum, product) => sum + +product.items * +product.price,
@@ -44,7 +44,7 @@ const Cart = ({
               product={product}
               increment={increment}
               decrement={decrement}
-              deleteIteam={deleteIteam}
+              deleteItem={deleteItem}
             />
           ),
         )
@@ -52,7 +52,9 @@ const Cart = ({
       {products.length === 0 ? (
         <h1></h1>
       ) : (
-        <span className="text-center mt-2.5 text-lg text-white font-bold ">
+        <span
+          className={`text-center mt-2.5 text-lg font-bold ${theme ? "text-black" : "text-white"}`}
+        >
           Total : {total}
         </span>
       )}

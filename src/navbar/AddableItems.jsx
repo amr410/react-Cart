@@ -10,7 +10,7 @@ const AddableItems = ({ product: { id, name }, theme, addItem }) => {
         size="lg"
         className={`border  ${
           theme
-            ? " border-black bg-gray-100 p-2 text-black"
+            ? " border-black bg-gray-200 p-2 text-black"
             : " border-black bg-gray-700 p-2 text-white"
         }`}
       >
