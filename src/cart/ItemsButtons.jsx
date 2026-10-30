@@ -26,7 +26,7 @@ const ItemsButtons = ({
       </Button>
       <X
         onClick={() => deleteItem(id)}
-        className={`mt-3 rounded-full ${theme ? "text-gray-600 hover:bg-gray-300" : "hover:bg-gray-700"}  `}
+        className={`mt-3 rounded-full ${theme ? "text-gray-600 hover:bg-gray-300 hover:text-red-700" : "hover:bg-gray-700  hover:text-red-800"}  `}
       ></X>
     </div>
   );
